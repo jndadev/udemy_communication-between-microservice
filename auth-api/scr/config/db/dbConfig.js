@@ -13,7 +13,6 @@ const sequelize = new Sequelize("auth-db", "jndadev", "358614", {
     },
 
 });
-
 sequelize.authenticate().then(() => {
     console.info("Connection has been stablished!");
 })

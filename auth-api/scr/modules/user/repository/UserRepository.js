@@ -9,7 +9,6 @@ class UserRepository {
             return null;    
         }
     }
-
 async findByEmail(email) {
     try {
         return await User.findOne({ where: { email } });

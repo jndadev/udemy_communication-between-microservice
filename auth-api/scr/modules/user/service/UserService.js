@@ -29,7 +29,6 @@ class UserService {
             };
         }
     }
-
     validateRequestData(email) {
         if (!email) {
             throw new UserException(
@@ -38,13 +37,11 @@ class UserService {
                 );
         }
     }
-
     validateUserNotFound(user) {
         if (!user) {
             throw new Error(httpStatus.BAD_REQUEST, "User was not found!");
         }
     }
-
     validateAuthenticatedUser(user, authUser) {
         if (!authUser || user.id !== authUser.id) {
             throw new UserException(
